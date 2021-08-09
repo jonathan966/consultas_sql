@@ -4,6 +4,7 @@ FROM ventas,detalle_ventas
 
 WHERE ventas.id_venta=detalle_ventas.id_venta
 
-GROUP BY ventas.fecha
+GROUP BY ventas.fecha limit 1,1;
 
-HAVING sum(detalle_ventas.total_x_producto) = 20;
+
+
